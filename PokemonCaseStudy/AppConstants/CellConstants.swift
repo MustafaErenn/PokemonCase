@@ -9,4 +9,7 @@ import Foundation
 
 class CellConstants {
     static let homePageCollectionViewCell = "homePageCollectionViewCell";
+    static let detailPageImageListCollectionViewCell = "detailPageImageListCollectionViewCell";
+    static let detailPageStatCollectionViewCell = "detailPageStatCollectionViewCell";
+   
 }

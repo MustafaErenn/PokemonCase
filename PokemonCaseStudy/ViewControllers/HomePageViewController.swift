@@ -31,6 +31,7 @@ class HomePageViewController:  BaseViewController<Double> {
     }
     
     func apiCall(){
+        
         networkManager.request(path: .home, params: "?offset=\(offset)&limit=20", token: nil,httpBody: nil
     ) { (result: Result<PokemonResponseModel, Error>) in
             switch result {
@@ -54,6 +55,12 @@ class HomePageViewController:  BaseViewController<Double> {
 }
 
 extension HomePageViewController : UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        navigateToPage(navigationConstant: .detailPageViewController, navigationType: .show, argument: pokemons[indexPath.row].id,modalPresentationStyle: .fullScreen)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return pokemons.count;
     }

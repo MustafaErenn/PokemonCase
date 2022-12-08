@@ -35,7 +35,7 @@ class BaseViewController<T>: UIViewController {
         }
     }
     
-    func navigateToPage<M>(navigationConstant: NavigationConstant, navigationType: NavigationType, argument: M?) {
+    func navigateToPage<M>(navigationConstant: NavigationConstant, navigationType: NavigationType, argument: M?,modalPresentationStyle : UIModalPresentationStyle?) {
         let storyboardId: String = navigationConstant.rawValue.split(separator: ".").first!.description
         let viewControllerId: String = navigationConstant.rawValue.split(separator: ".").last!.description
         
@@ -43,6 +43,9 @@ class BaseViewController<T>: UIViewController {
         let viewController = storyboard.instantiateViewController(withIdentifier: viewControllerId) as! BaseViewController<M>
         viewController.argument = argument
         
+        if modalPresentationStyle != nil {
+            viewController.modalPresentationStyle = modalPresentationStyle!;
+        }
         switch navigationType {
             case .show:
                 self.show(viewController, sender: nil)

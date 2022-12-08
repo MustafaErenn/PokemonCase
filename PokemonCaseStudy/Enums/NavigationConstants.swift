@@ -10,4 +10,5 @@ import Foundation
 enum NavigationConstant: String {
     case homePageViewController = "Main.HomePageViewController"
     case detailPageViewController = "Main.DetailPageViewController"
+    
 }
