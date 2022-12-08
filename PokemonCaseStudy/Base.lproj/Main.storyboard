@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home Page View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HomePageViewController" customModule="PokemonCaseStudy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokedex" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tB8-ay-2XX">
+                                <rect key="frame" x="16" y="64" width="140" height="42"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6a1-7A-of7">
+                                <rect key="frame" x="20" y="138" width="353" height="680"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="V3Y-5z-6Wz">
+                                    <size key="itemSize" width="165" height="130"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="homePageCollectionViewCell" id="bNz-MB-cOc" customClass="HomePageCollectionViewCell" customModule="PokemonCaseStudy" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="165" height="130"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="gsL-Ik-uLQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="165" height="130"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F9c-I8-33F">
+                                                    <rect key="frame" x="137.66666666666666" y="8" width="19.333333333333343" height="21"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bulbasaur" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t0y-cq-uGN">
+                                                    <rect key="frame" x="16" y="34" width="92.666666666666671" height="24"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="40v-6H-J1I">
+                                                    <rect key="frame" x="55" y="40" width="110" height="90"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="110" id="Wja-xm-Ozh"/>
+                                                        <constraint firstAttribute="height" constant="90" id="iKq-3e-0Cl"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="t0y-cq-uGN" firstAttribute="leading" secondItem="gsL-Ik-uLQ" secondAttribute="leading" constant="16" id="6h7-uT-xJS"/>
+                                                <constraint firstItem="F9c-I8-33F" firstAttribute="top" secondItem="gsL-Ik-uLQ" secondAttribute="top" constant="8" id="9p9-Ue-nxe"/>
+                                                <constraint firstItem="t0y-cq-uGN" firstAttribute="top" secondItem="F9c-I8-33F" secondAttribute="bottom" constant="5" id="XEW-tU-i1y"/>
+                                                <constraint firstAttribute="trailing" secondItem="F9c-I8-33F" secondAttribute="trailing" constant="8" id="i3A-pa-MrU"/>
+                                                <constraint firstAttribute="bottom" secondItem="40v-6H-J1I" secondAttribute="bottom" id="mk5-A6-tbl"/>
+                                                <constraint firstAttribute="trailing" secondItem="40v-6H-J1I" secondAttribute="trailing" id="vcU-11-5ie"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="165" height="130"/>
+                                        <connections>
+                                            <outlet property="pokemonIdLabel" destination="F9c-I8-33F" id="axW-UZ-yDm"/>
+                                            <outlet property="pokemonImageView" destination="40v-6H-J1I" id="AMe-NY-dDQ"/>
+                                            <outlet property="pokemonNameLabel" destination="t0y-cq-uGN" id="HMp-1U-4N4"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tB8-ay-2XX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="LSO-ym-CEy"/>
+                            <constraint firstItem="tB8-ay-2XX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="Tje-cE-POF"/>
+                            <constraint firstItem="6a1-7A-of7" firstAttribute="top" secondItem="tB8-ay-2XX" secondAttribute="bottom" constant="32" id="Y24-xe-uGP"/>
+                            <constraint firstItem="6a1-7A-of7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="bQM-xB-Fc5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6a1-7A-of7" secondAttribute="trailing" constant="20" id="e3I-IE-jfo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6a1-7A-of7" secondAttribute="bottom" id="pvF-74-GRb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pokemonListingCollectionView" destination="6a1-7A-of7" id="I6a-Fu-twh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.824427480916029" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
