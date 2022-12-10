@@ -18,13 +18,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokedex" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tB8-ay-2XX">
-                                <rect key="frame" x="16" y="64" width="140" height="42"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                <rect key="frame" x="16" y="69" width="100" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localeKey" value="appTitle"/>
+                                </userDefinedRuntimeAttributes>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6a1-7A-of7">
-                                <rect key="frame" x="20" y="138" width="353" height="680"/>
+                                <rect key="frame" x="20" y="126" width="353" height="692"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="V3Y-5z-6Wz">
                                     <size key="itemSize" width="165" height="130"/>
@@ -78,15 +81,30 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2DU-MU-Jgk">
+                                <rect key="frame" x="304" y="67" width="69" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="crash">
+                                    <color key="baseForegroundColor" red="0.55686277149999996" green="0.1607843041" blue="0.14509806040000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localeKey" value="crash"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="doCrash:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cIT-ky-Yhk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="tB8-ay-2XX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="6TJ-Lg-rB2"/>
                             <constraint firstItem="tB8-ay-2XX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="LSO-ym-CEy"/>
-                            <constraint firstItem="tB8-ay-2XX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="Tje-cE-POF"/>
-                            <constraint firstItem="6a1-7A-of7" firstAttribute="top" secondItem="tB8-ay-2XX" secondAttribute="bottom" constant="32" id="Y24-xe-uGP"/>
+                            <constraint firstItem="2DU-MU-Jgk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="MDl-LI-p9b"/>
+                            <constraint firstItem="6a1-7A-of7" firstAttribute="top" secondItem="tB8-ay-2XX" secondAttribute="bottom" constant="27" id="YXY-b8-9Db"/>
                             <constraint firstItem="6a1-7A-of7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="bQM-xB-Fc5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6a1-7A-of7" secondAttribute="trailing" constant="20" id="e3I-IE-jfo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2DU-MU-Jgk" secondAttribute="trailing" constant="8" id="emv-CQ-EhI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6a1-7A-of7" secondAttribute="bottom" id="pvF-74-GRb"/>
                         </constraints>
                     </view>
@@ -236,6 +254,9 @@
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localeKey" value="stats"/>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

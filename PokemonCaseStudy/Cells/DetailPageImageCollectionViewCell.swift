@@ -16,3 +16,4 @@ class DetailPageImageCollectionViewCell: UICollectionViewCell {
         pokemonImage.sd_setImage(with: URL(string: imageLink));
     }
 }
+

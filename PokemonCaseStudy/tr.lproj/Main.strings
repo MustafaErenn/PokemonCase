@@ -1,0 +1,35 @@
+/* Class = "UIButton"; configuration.title = "Crash"; ObjectID = "2DU-MU-Jgk"; */
+"2DU-MU-Jgk.configuration.title" = "Crash";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "2DU-MU-Jgk"; */
+"2DU-MU-Jgk.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "999"; ObjectID = "74Q-Nq-jGi"; */
+"74Q-Nq-jGi.text" = "999";
+
+/* Class = "UILabel"; text = "#1"; ObjectID = "F9c-I8-33F"; */
+"F9c-I8-33F.text" = "#1";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "MGA-88-xmk"; */
+"MGA-88-xmk.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Self-Defence"; ObjectID = "Voo-lT-Fba"; */
+"Voo-lT-Fba.text" = "Self-Defence";
+
+/* Class = "UILabel"; text = "#1"; ObjectID = "cwn-dC-Fb1"; */
+"cwn-dC-Fb1.text" = "#1";
+
+/* Class = "UILabel"; text = "Bulbasaur"; ObjectID = "eiU-bv-rWo"; */
+"eiU-bv-rWo.text" = "Bulbasaur";
+
+/* Class = "UILabel"; text = "Stats"; ObjectID = "p4h-xj-kua"; */
+"p4h-xj-kua.text" = "Stats";
+
+/* Class = "UILabel"; text = "Bulbasaur"; ObjectID = "t0y-cq-uGN"; */
+"t0y-cq-uGN.text" = "Bulbasaur";
+
+/* Class = "UILabel"; text = "Pokedex"; ObjectID = "tB8-ay-2XX"; */
+"tB8-ay-2XX.text" = "Pokedex";
+
+
+

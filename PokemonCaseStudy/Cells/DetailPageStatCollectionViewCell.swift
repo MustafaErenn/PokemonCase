@@ -23,7 +23,7 @@ class DetailPageStatCollectionViewCell: UICollectionViewCell {
         
         self.statLabelValue.text = String(model?.base_stat ?? 0)
         
-        self.statLabel.text = model?.stat?.name ?? ""
+        self.statLabel.text = (model?.stat?.name ?? "").localized
         
         self.statValueProgressBar.setProgress(Float((model?.base_stat ?? 0))/100.0, animated: true)
     }

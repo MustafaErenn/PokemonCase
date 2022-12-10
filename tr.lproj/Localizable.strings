@@ -1,0 +1,26 @@
+/* 
+  Localizable.strings
+  PokemonCaseStudy
+
+  Created by Mustafa on 10.12.2022.
+  
+*/
+
+
+"hp" = "Can";
+
+"attack" = "Saldırı";
+
+"defense" = "Savunma";
+
+"special-attack" = "Özel-Saldırı";
+
+"special-defense" = "Özel-Savunma";
+
+"speed" = "Hız";
+
+"crash" = "Hata";
+
+"appTitle" = "Pokemon Veritabanı";
+
+"stats" = "İstatistikler";

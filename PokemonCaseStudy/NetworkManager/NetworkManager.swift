@@ -15,6 +15,7 @@ class NetworkManager {
     }
     
     private let baseURL : String = StringConstants.instance.BASE_URL;
+    
 
   
     func request<T: Decodable>(path : NetworkRoutes, httpMethod: HttpMethods = .get, params : String?, token : String?, httpBody: Codable?,completion: @escaping (Result<T, Error>) -> Void) {
@@ -41,7 +42,7 @@ class NetworkManager {
             if httpBody != nil {
                 let rawHttpBody = try JSONEncoder().encode(httpBody!.self)
                 request.httpBody = rawHttpBody;
-            } 
+            }
         }catch{
             print("JSON ENCODE FAILED");
         }

@@ -43,13 +43,17 @@ class DetailPageViewController: BaseViewController<String> {
         
         
         
+        self.pokemonImageListCollection.backgroundColor = .none
         
-        self.pokemonImageListView.layer.cornerRadius = 5
-        
-        self.pokemonImageListView.layer.shadowColor = UIColor.black.cgColor
-        self.pokemonImageListView.layer.shadowOpacity = 1
-        self.pokemonImageListView.layer.shadowOffset = .zero
-        self.pokemonImageListView.layer.shadowRadius = 10
+        self.pokemonImageListView.backgroundColor = .none
+        self.pokemonImageListView.layer.backgroundColor = .none
+//
+//        self.pokemonImageListView.layer.cornerRadius = 5
+//
+//        self.pokemonImageListView.layer.shadowColor = UIColor.black.cgColor
+//        self.pokemonImageListView.layer.shadowOpacity = 1
+//        self.pokemonImageListView.layer.shadowOffset = .zero
+//        self.pokemonImageListView.layer.shadowRadius = 10
         
         
         showLoadingBar();
@@ -109,12 +113,19 @@ extension DetailPageViewController : UICollectionViewDataSource,UICollectionView
             
             cell.setUp(imageLink: spriteList[indexPath.row]);
             
+             
             
-            cell.layer.borderWidth = 1
-            cell.layer.borderColor = UIColor.red.cgColor
+//            cell.layer.cornerRadius = 20
             
-            cell.layer.cornerRadius = 20
+            cell.layer.backgroundColor = UIColor.lightGray.cgColor
             
+            cell.layer.cornerRadius = 5
+            
+            cell.layer.shadowColor = UIColor.black.cgColor
+            cell.layer.shadowOpacity = 1
+            cell.layer.shadowOffset = .zero
+            cell.layer.shadowRadius = 10
+              
             return cell;
         }else{
             let cell = pokemonStatCollectionView.dequeueReusableCell(withReuseIdentifier: CellConstants.detailPageStatCollectionViewCell, for: indexPath) as! DetailPageStatCollectionViewCell;

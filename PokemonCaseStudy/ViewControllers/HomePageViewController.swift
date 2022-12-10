@@ -6,10 +6,13 @@
 //
 
 import UIKit
+import FirebaseRemoteConfig
+import Firebase
 
 class HomePageViewController:  BaseViewController<Double> {
     
     @IBOutlet weak var pokemonListingCollectionView: UICollectionView!
+    
     
     var pokemons : [PokemonModel] = [];
     var defaultPokemons : [PokemonModel] = [];
@@ -17,7 +20,7 @@ class HomePageViewController:  BaseViewController<Double> {
     var offset : Int = 0;
     var totalCount : Int = 0;
     
-    
+    var forCrash : [String] = ["Mustafa"];
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,14 +29,34 @@ class HomePageViewController:  BaseViewController<Double> {
         
         
         showLoadingBar();
-        apiCall();
         
+        apiCall();
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        fetchRemoteConfigValues();
+    }
+    
+    
+    @IBAction func doCrash(_ sender: UIButton) {
+        print(forCrash[1]);
+    }
+    
+    func fetchRemoteConfigValues(){
+        let remoteConfigManager : CustomRemoteConfigManager = CustomRemoteConfigManager();
+        
+        remoteConfigManager.fetchValues(fetchDone: { result in
+            DispatchQueue.main.async {
+                self.view.backgroundColor = result ? .red : .white;
+            }
+        })
     }
     
     func apiCall(){
         
         networkManager.request(path: .home, params: "?offset=\(offset)&limit=20", token: nil,httpBody: nil
-    ) { (result: Result<PokemonResponseModel, Error>) in
+        ) { (result: Result<PokemonResponseModel, Error>) in
             switch result {
             case .success(let response):
                 if response.results == nil {return}
@@ -58,6 +81,15 @@ extension HomePageViewController : UICollectionViewDataSource,UICollectionViewDe
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+//        Analytics.logEvent("selected_pokemon", parameters: nil)
+//        [pokemons[indexPath.row].id : pokemons[indexPath.row].name ?? "default"]
+        
+        Analytics.logEvent("selected_pokemon", parameters: [
+          "id": pokemons[indexPath.row].id as NSObject,
+          "name": (pokemons[indexPath.row].name ?? "default") as NSObject,
+        ])
+
+        
         navigateToPage(navigationConstant: .detailPageViewController, navigationType: .show, argument: pokemons[indexPath.row].id,modalPresentationStyle: .fullScreen)
     }
     
@@ -69,7 +101,7 @@ extension HomePageViewController : UICollectionViewDataSource,UICollectionViewDe
         
         
         let cell = pokemonListingCollectionView.dequeueReusableCell(withReuseIdentifier: CellConstants.homePageCollectionViewCell, for: indexPath) as!
-            HomePageCollectionViewCell;
+        HomePageCollectionViewCell;
         
         if (indexPath.row == pokemons.count - 3) && indexPath.row < totalCount{
             apiCall();
