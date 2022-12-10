@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		454B7D96294507A900DC3511 /* FirebaseEventHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454B7D95294507A900DC3511 /* FirebaseEventHelper.swift */; };
 		4573250429410FD50052EBF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4573250329410FD50052EBF5 /* AppDelegate.swift */; };
 		4573250629410FD50052EBF5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4573250529410FD50052EBF5 /* SceneDelegate.swift */; };
 		4573250829410FD50052EBF5 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4573250729410FD50052EBF5 /* HomePageViewController.swift */; };
@@ -64,6 +65,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		454B7D95294507A900DC3511 /* FirebaseEventHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseEventHelper.swift; sourceTree = "<group>"; };
 		4573250029410FD50052EBF5 /* PokemonCaseStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokemonCaseStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4573250329410FD50052EBF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4573250529410FD50052EBF5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -267,6 +269,7 @@
 			children = (
 				45732551294119730052EBF5 /* PokemonImageHelper.swift */,
 				4573256F2943CA310052EBF5 /* RemoteConfigHelper.swift */,
+				454B7D95294507A900DC3511 /* FirebaseEventHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -455,6 +458,7 @@
 				4573254B2941187A0052EBF5 /* HttpMethodsExtension.swift in Sources */,
 				457325622941FAA00052EBF5 /* DetailPageStatCollectionViewCell.swift in Sources */,
 				45732552294119730052EBF5 /* PokemonImageHelper.swift in Sources */,
+				454B7D96294507A900DC3511 /* FirebaseEventHelper.swift in Sources */,
 				45732537294111BF0052EBF5 /* NavigationType.swift in Sources */,
 				4573250829410FD50052EBF5 /* HomePageViewController.swift in Sources */,
 				45732544294117B70052EBF5 /* StringConstants.swift in Sources */,

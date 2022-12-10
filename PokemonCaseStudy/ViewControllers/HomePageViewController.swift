@@ -80,15 +80,11 @@ class HomePageViewController:  BaseViewController<Double> {
 extension HomePageViewController : UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-//        Analytics.logEvent("selected_pokemon", parameters: nil)
-//        [pokemons[indexPath.row].id : pokemons[indexPath.row].name ?? "default"]
-        
-        Analytics.logEvent("selected_pokemon", parameters: [
+                
+        Analytics.logEvent(FirebaseEventHelper.instance.eventKey, parameters: [
           "id": pokemons[indexPath.row].id as NSObject,
           "name": (pokemons[indexPath.row].name ?? "default") as NSObject,
         ])
-
         
         navigateToPage(navigationConstant: .detailPageViewController, navigationType: .show, argument: pokemons[indexPath.row].id,modalPresentationStyle: .fullScreen)
     }

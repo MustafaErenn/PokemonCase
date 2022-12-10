@@ -15,10 +15,6 @@ class DetailPageStatCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var statValueProgressBar: UIProgressView!
     
-    
-    
-    
-    
     func setUp(model : StatsModel?){
         
         self.statLabelValue.text = String(model?.base_stat ?? 0)

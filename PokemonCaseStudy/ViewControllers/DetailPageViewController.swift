@@ -47,15 +47,7 @@ class DetailPageViewController: BaseViewController<String> {
         
         self.pokemonImageListView.backgroundColor = .none
         self.pokemonImageListView.layer.backgroundColor = .none
-//
-//        self.pokemonImageListView.layer.cornerRadius = 5
-//
-//        self.pokemonImageListView.layer.shadowColor = UIColor.black.cgColor
-//        self.pokemonImageListView.layer.shadowOpacity = 1
-//        self.pokemonImageListView.layer.shadowOffset = .zero
-//        self.pokemonImageListView.layer.shadowRadius = 10
-        
-        
+
         showLoadingBar();
         apiCall()
     }
